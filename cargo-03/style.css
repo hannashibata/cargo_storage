@@ -924,7 +924,6 @@ footer h2, h3 {
     font-family: var(--font-serif-regular);
     font-feature-settings: "dlig" 1;
     font-weight: normal;
-    /* text-transform: uppercase; */
 }
 
 footer h2 {
@@ -945,18 +944,6 @@ footer p .contact {
     width: 36ch;
     text-wrap: pretty;
 }
-
-/* 
-h3 ul li {
-    margin: .25em;
-} 
-
-
-footer a {
-    color: white;
-}
-
-*/
 
 footer a:hover {
         color: var(--color-yellow);
@@ -1114,8 +1101,8 @@ footer .container {
     color: var(--color-a);
 }
 
-.heroo-home .frame a:hover {
-        color: var(--color-blue);
+.hero-home .frame a:hover {
+    color: var(--color-blue);
 }
 
 .hero-home .frame h3 {
@@ -1195,4 +1182,4 @@ footer .container {
     100% {
         opacity: 1;
     }
-}
+}z

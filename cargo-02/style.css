@@ -1102,8 +1102,8 @@ footer .container {
     color: var(--color-a);
 }
 
-.heroo-home .frame a:hover {
-        color: var(--color-blue);
+.hero-home .frame a:hover {
+    color: var(--color-blue);
 }
 
 .hero-home .frame h3 {
