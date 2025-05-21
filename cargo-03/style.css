@@ -829,7 +829,14 @@ body.mobile .audio-player {
 }
 
 
+/* -------------------- */
+/* -- GLOBAL HELPERS -- */
+/* -------------------- */
 
+/* This seems not working */
+.align-right {
+    text-align: right;
+}
 
 
 
@@ -1182,4 +1189,4 @@ footer .container {
     100% {
         opacity: 1;
     }
-}z
+}
