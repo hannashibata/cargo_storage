@@ -240,11 +240,87 @@ hr {
  * Editor styles
  */
 
+/* Defined typefaces and basic styling appears in the Cargo Editor */
+
+[data-predefined-style="true"] h1 {
+	font-family: var(--font-serif-bold), "Adobe Arno Pro", 'Gerogia', Icons;
+	font-weight: normal;
+	padding: 0;
+    margin: 0;
+	font-size: 3em;
+	line-height: 1.2;
+	color: var(--color-black);
+    font-feature-settings: "dlig" 1;
+    text-wrap: pretty;
+	}
+
+[data-predefined-style="true"] h1 a {
+	color: var(--color-a);
+}
+
+[data-predefined-style="true"] h1 span {
+	font-size: 6vw;
+    margin: 0;
+}
+
+h1 i {
+    font-family: 'ppeditorial-old-bolditalic';
+    font-weight: normal;
+}
+
+
+[data-predefined-style="true"] h2 {
+	font-family: var(--font-serif-regular), "Adobe Arno Pro", 'Georgia', Icons;
+	font-weight: normal;
+	padding: 0;
+    margin: 0;
+	color: var(--color-black);
+	font-size: 2em;
+	line-height: 1.2;
+    font-feature-settings: "dlig" 1;
+    text-wrap: pretty;
+}
+
+[data-predefined-style="true"] h2 a {
+	color: var(--color-a);
+}
+
+[data-predefined-style="true"] h2 span {
+    font-size: 5vw;
+    color: var(--color-white);
+    text-wrap: pretty;
+}
+
+h2 i {
+    font-family: 'ppeditorial-old-italic';
+}
+
+[data-predefined-style="true"] h3 {
+	font-size: 1.5rem;
+	color: var(--color-black);
+	font-family: var(--font-serif-regular), "Adobe Arno Pro", 'Georgia', Icons;
+    font-weight: normal;
+	line-height: 1.2;
+    text-wrap: pretty;
+	padding: 0;
+    margin: 0;
+}
+
+[data-predefined-style="true"] h4 {
+	font-size: 1.15rem;
+	color: var(--color-black);
+    text-transform: uppercase;
+	font-family: Karla, Icons;
+	line-height: 1.2;
+	font-weight: 500;
+    text-wrap: pretty;
+    margin: 0;
+}
+
 [data-predefined-style="true"] bodycopy {
 	font-size: 1rem;
 	color: var(--color-black);
 	font-family: Karla, Icons;
-	font-style: light;
 	line-height: 1.3;
 	font-weight: 400;
     text-wrap: pretty;
@@ -258,7 +334,7 @@ hr {
 	font-size: 1.5rem;
 	color: var(--color-white);
 	font-family: Karla, Icons;
-	font-style: light;
+	/* font-style: light; */
 	line-height: 1.3;
 	font-weight: 400;
     text-wrap: pretty;
@@ -293,57 +369,6 @@ bodycopy a.icon-link:hover {
 	padding-bottom: 0;
 }
 
-[data-predefined-style="true"] h1 {
-	font-family: var(--font-serif-bold), "Adobe Arno Pro", 'Gerogia', Icons;
-	font-style: normal;
-	font-weight: 400;
-	padding: 0;
-	margin: 0 0 1em 0;
-	font-size: 3em;
-	line-height: 1.2;
-	color: var(--color-black);
-    font-feature-settings: "dlig" 1;
-    text-wrap: pretty;
-	}
-
-[data-predefined-style="true"] h1 a {
-	color: var(--color-a);
-}
-
-[data-predefined-style="true"] h1 span {
-	font-size: 6vw;
-}
-
-h1 i {
-    font-family: 'ppeditorial-old-bolditalic';
-}
-
-h2 i {
-    font-family: 'ppeditorial-old-italic';
-}
-
-[data-predefined-style="true"] h2 {
-	font-family: var(--font-serif-regular), "Adobe Arno Pro", 'Georgia', Icons;
-	font-style: normal;
-	font-weight: 400;
-	padding: 0;
-	margin: 0 0 .5em 0;
-	color: var(--color-black);
-	font-size: 2em;
-	line-height: 1.2;
-    font-feature-settings: "dlig" 1;
-    text-wrap: pretty;
-	}
-
-[data-predefined-style="true"] h2 a {
-	color: var(--color-a);
-}
-
-[data-predefined-style="true"] h2 span {
-    font-size: 5vw;
-    color: var(--color-white);
-    text-wrap: pretty;
-}
 
 [data-predefined-style="true"] small {
 	display: inline-block;
@@ -360,18 +385,6 @@ h2 i {
 [data-predefined-style="true"] small a {
 	color: var(--color-a);
 	border-bottom-width: 0em;
-}
-
-/* CUSTOM TYPOGRAPHY FOR H3 & H4 */
-[data-predefined-style="true"] h4 {
-	font-size: 1.15rem;
-	color: var(--color-black);
-    text-transform: uppercase;
-	font-family: Karla, Icons;
-	line-height: 1.3;
-	font-weight: 500;
-    text-wrap: pretty;
-    margin: 1rem 0 0 0;
 }
 
 
@@ -962,22 +975,41 @@ body.mobile .audio-player {
     */
 }
 
-footer h2, h3 {
+[data-css-preset] body .footer-h2, .footer-h3 {
     font-family: var(--font-serif-regular);
     font-feature-settings: "dlig" 1;
     font-weight: normal;
 }
 
-footer h2 {
+[data-css-preset] body .footer-h2 {
     font-size: clamp(2em, 4vw, 4vw);
 }
 
-footer h3 {
+[data-css-preset] body .footer-h3 {
     font-family: var(--font-serif-regularitalic);
+    color: var(--color-white);
     font-size: clamp(1.25em, 2vw, 2vw);
     width: 36ch;
     text-wrap: pretty;
 }
+
+
+/* footer h2, h3 {
+    font-family: var(--font-serif-regular);
+    font-feature-settings: "dlig" 1;
+    font-weight: normal;
+} */
+
+/* footer h2 {
+    font-size: clamp(2em, 4vw, 4vw);
+} */
+
+/* footer h3 {
+    font-family: var(--font-serif-regularitalic);
+    font-size: clamp(1.25em, 2vw, 2vw);
+    width: 36ch;
+    text-wrap: pretty;
+} */
 
 @media (max-width: 512px){
     footer h3 {
@@ -1233,15 +1265,21 @@ footer .container {
 }
 
 /* CUSTOM STYLING FOR ABOUT PAGE */
-.about-h1 {
-    
+[data-css-preset] body .about-h1{
+    margin: 0 0 .5em 0;
 }
 
-.about-h3, 
+[data-css-preset] body .about-h2{
+    margin: 0 0 .5em 0;
+}
+
+[data-css-preset] body .about-h3, 
 .about-p {
-    margin: .25rem 0;
     max-width: 66ch;
-    
+}
+
+[data-css-preset] body .about-h4 {
+    margin: 0 0 1em 0;
 }
 
 dl {
