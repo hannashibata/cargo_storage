@@ -1,0 +1,1264 @@
+/* ----------------------
+-------------------------
+
+CSS TABLE OF CONTENTS
+
+# GLOBAL STYLES
+    # GLOBAL VARIABLES
+    # GLOBAL RESET
+    # GLOBAL COLORS
+    # GLOBAL TYPOGRAPHY
+    # GLOBAL MEDIA
+    # GLOBAL HELPERS
+
+# LAYOUT
+    # MEDIA QUERIES / BREAKPOINTS (RESPONSIVE TYPOGRAPHY)
+    # CONTAINER
+    # GRID
+
+# SITE STRUCTURE
+    # HEADER
+        # LOGO
+        # SITE NAV
+            # TOGGLE MENU
+                # NAVICON / HAMBURGER
+        # SITE-HEADER-ON-TOP-OF-HERO
+    # MAIN
+        # SECTIONS
+            # HERO
+    # FOOTER
+
+# UI COMPONENTS
+    # BUTTONS
+
+# ANIMATION
+    # SMOOTH SCROLLING
+
+# CUSTOM STYLING
+
+-------------------------
+---------------------- */
+
+/* ----------------------------------------------- */
+/* GLOBAL STYLES  */
+/* ----------------------------------------------- */
+
+/* GLOBAL VARIABLES
+ * Definitions for commonly used colors, typeface, sizing-units.
+/* -----------------------------------------------  */
+
+@font-face {
+    font-family: 'ppeditorial-old-thin';
+    src: url('https://files.cargocollective.com/c2721547/PPEditorialOld-Thin.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ppeditorial-old-thinitalic';
+    src: url('https://files.cargocollective.com/c2721547/PPEditorialOld-ThinItalic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'ppeditorial-old-regular';
+    src: url('https://files.cargocollective.com/c2721547/PPEditorialOld-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ppeditorial-old-italic';
+    src: url('https://files.cargocollective.com/c2721547/PPEditorialOld-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ppeditorial-old-bold';
+    src: url('https://files.cargocollective.com/c2721547/PPEditorialOld-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ppeditorial-old-bolditalic';
+    src: url('https://files.cargocollective.com/c2721547/PPEditorialOld-BoldItalic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+
+    /* DEFINE ALL COMMONLY USED COLORS HERE */
+    --color-black: rgb(25 25 25 / .85);
+    --color-white: rgb(245 245 238 / 1);
+    --color-white85: rgb(245 245 238 / .85);
+    --color-yellow: rgb(255 238 0 /1);
+    --color-blue: rgb(0 17 255 /1);
+    /* white: #F5F5EE
+     * black: #191919
+     * yellow: #FFEE00
+     * blue: #0011ff 
+     */
+
+    /* Dark mode */
+    /* --color-body-bg: rgb(25 25 25 / 1);
+    --color-a: rgb(255 255 255 / 1);
+    --color-a-hover: var(--color-yellow);
+    --color-siteheader-a: var(--color-white);
+    --color-siteheader-a-hover: var(--color-yellow);
+    --color-footer-bg: var(--color-white);
+    --color-footer-text: var(--color-black);
+    --color-footer-a: rgb(0 0 0 /1);
+    --color-footer-a-hover: var(--color-blue);
+    --color-text: var(--color-white85); */
+
+    /* Light mode */
+    --color-body-bg: rgb(245 245 238 / 1);
+    --color-a: rgb(0 0 0 / 1);
+    --color-a-hover: var(--color-blue);
+    --color-siteheader-a: var(--color-black);
+    --color-siteheader-a-hover: var(--color-blue);
+    --color-footer-bg: rgb(0 0 0 /1);
+    --color-footer-text: rgb(255 255 255 /.8);
+    --color-footer-a: rgb(255 255 255 /1);
+    --color-footer-a-hover: var(--color-yellow);
+    --color-text: var(--color-black);    
+    --color-siteheader-bg: transparent;
+
+    /*  DEFINE ALL FONTS USED HERE */
+    --font-serif-bold: 'ppeditorial-old-bold', 'Georgia', serif;
+    --font-serif-bolditalic: 'ppeditorial-old-bolditalic', 'Georgia', serif;
+    --font-serif-regular: 'ppeditorial-old-regular', 'Georgia', serif;
+    --font-serif-regularitalic: 'ppeditorial-old-italic', 'Georgia', serif;
+    --font-serif-thin: 'ppeditorial-old-thin', 'Georgia', serif;
+    --font-serif-thinitalic: 'ppeditorial-old-thinitalic', 'Georgia', serif;
+    --font-sans-serif: "Karla", system-ui, "Helvetica", "Arial";
+
+    /* SIZING UNITS */
+    /* --container-width: 1200px; */
+    --container-width: 80vw;
+    --unit-small: 1em;
+    --unit-medium: 2em;
+    --unit-large: 4em;
+
+}
+
+body {
+	background-color: var(--color-body-bg);
+	color: var(--color-black);
+}
+
+a:active {
+	opacity: 0.7;
+}
+
+.page a.active {
+	opacity: .4;
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bolder;
+}
+
+sub,
+sup {
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	top: 0.3em;
+}
+
+sup {
+	top: -0.4em;
+}
+
+s {
+	text-decoration: line-through;
+}
+
+img {
+	border: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0 0 0 1em;
+}
+
+blockquote {
+	margin: 0;
+	padding: 0 0 0 2em;
+}
+
+hr {
+	background: rgb(25, 25, 25 / .2);
+	border: 0;
+	height: 1px;
+	display: block;
+}
+
+.content img {
+	float: none;
+	margin-bottom: .5em;
+    border-radius: 8px;
+}
+
+.gallery_image_caption {
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.35);
+	font-family: var(--font-serif-regularitalic), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, "Sans Serif", Icons;
+	font-style: normal;
+	line-height: 1.3;	
+}
+
+/**
+ * Loading Animation
+ */
+
+.loading[data-loading] {
+	position: fixed;
+	bottom: 8px; 
+    left: 8px;
+}
+
+/**
+ * Editor styles
+ */
+
+/* Defined typefaces and basic styling appears in the Cargo Editor */
+[data-predefined-style="true"] bodycopy a {
+	color: var(--color-a);
+	/* padding-bottom: 0.1em; */
+	/* border-bottom: 0.0em solid rgb(25 25 25 /.2); */
+	text-decoration: none;
+    font-weight: 410;
+}
+
+[data-predefined-style="true"] bodycopy a:hover {
+    color: var(--color-blue);
+}
+
+bodycopy a.image-link,
+bodycopy a.icon-link,
+bodycopy a.image-link:hover,
+bodycopy a.icon-link:hover {
+	border-bottom: 0;
+	padding-bottom: 0;
+}
+
+[data-predefined-style="true"] h1 {
+	font-family: var(--font-serif-bold), "Adobe Arno Pro", 'Gerogia', Icons;
+	font-weight: normal;
+	padding: 0;
+    margin: 0;
+	font-size: 3em;
+	line-height: 1.2;
+	color: var(--color-black);
+    font-feature-settings: "dlig" 1;
+    text-wrap: pretty;
+	}
+
+[data-predefined-style="true"] h1 a {
+	color: var(--color-a);
+}
+
+[data-predefined-style="true"]  h1 i {
+    font-family: 'ppeditorial-old-bolditalic';
+    font-weight: normal;
+}
+
+[data-predefined-style="true"] h2 {
+	font-family: var(--font-serif-regular), "Adobe Arno Pro", 'Georgia', Icons;
+	font-weight: normal;
+	padding: 0;
+    margin: 0;
+	color: var(--color-black);
+	font-size: 2em;
+	line-height: 1.2;
+    font-feature-settings: "dlig" 1;
+    text-wrap: pretty;
+}
+
+[data-predefined-style="true"] h2 a {
+	color: var(--color-a);
+}
+
+[data-predefined-style="true"] h2 span {
+    font-size: 5vw;
+    color: var(--color-white);
+    text-wrap: pretty;
+}
+
+[data-predefined-style="true"] h3 {
+	font-size: 1.5rem;
+	color: var(--color-black);
+	font-family: var(--font-serif-regular), "Adobe Arno Pro", 'Georgia', Icons;
+    font-weight: normal;
+	line-height: 1.2;
+    text-wrap: pretty;
+	padding: 0;
+    margin: 0;
+}
+
+[data-predefined-style="true"] h4 {
+	font-size: 1.15rem;
+	color: var(--color-black);
+    text-transform: uppercase;
+	font-family: Karla, Icons;
+	line-height: 1.2;
+	font-weight: 500;
+    text-wrap: pretty;
+    margin: 0;
+}
+
+[data-predefined-style="true"] bodycopy {
+	font-size: 1rem;
+	color: var(--color-black);
+	font-family: Karla, Icons;
+	line-height: 1.3;
+	font-weight: 400;
+    text-wrap: pretty;
+}
+
+[data-predefined-style="true"] small {
+	display: inline-block;
+	font-size: 1.2rem;
+	line-height: 1.3;
+	font-family: Karla, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, 'Sans Serif', Icons;
+	font-style: normal;
+    text-transform: uppercase;
+	font-weight: 600;
+	color: var(--color-black);
+    margin-bottom: .5em;
+}
+
+[data-predefined-style="true"] small a {
+	color: var(--color-a);
+	border-bottom-width: 0em;
+}
+
+
+/**
+ * Breakpoints
+ */
+
+
+[data-css-preset] .page {
+    background-color: initial /*!page_bgcolor*/;
+}
+
+.mobile .page,
+[data-css-preset].mobile .page {
+	position: relative;
+	min-height: 10px;
+	max-width: 100%;
+	width: 100%;
+	background-color: transparent /*!page_bgcolor*/;
+}
+
+[data-css-preset] .container {
+	margin-left: auto /*!content_center*/;
+	margin-right: auto /*!content_center*/;
+	text-align: left /*!text_left*/;
+}
+
+[data-css-preset] body {
+	background-color: #f5f5ee/*!body_bgcolor*/; /*!body_bgcolor*/;
+}
+
+[data-css-preset] .container_width {
+	width: 90%/*!content_center*/;
+}
+
+[data-css-preset] .content_padding {
+	padding-top: 2.1rem/*!main_margin*/;
+	padding-bottom: 2.1rem/*!main_margin*/;
+	padding-left: 2.1rem/*!main_margin*/;
+	padding-right: 2.1rem/*!main_margin*/;
+}
+
+
+[data-css-preset] text-limit {
+	display: inline-block /*!text_width*/;
+	max-width: 66em/*!text_width*/;
+}
+
+/**
+ * Thumbnails
+ */
+
+div[thumbnails] {
+	justify-content: flex-start;
+}
+
+[data-css-preset] .thumbnails {
+   	background-color: transparent/*!thumbnails_bgcolor*/;   
+}
+
+[data-css-preset] .thumbnails_width {
+    width: 100%/*!thumbnails_width*/;
+}
+
+[data-css-preset] [thumbnails-pad] {
+    padding: 1em/*!thumbnails_padding*/;
+}
+
+[data-css-preset] [thumbnails-gutter] {
+    margin: -2em/*!thumbnails_padding*/;
+}
+
+[data-css-preset] [responsive-layout] [thumbnails-pad] {
+    padding: 0.5em/*!responsive_thumbnails_padding*/; 
+}
+
+[data-css-preset] [responsive-layout] [thumbnails-gutter] {
+    margin: -1em/*!responsive_thumbnails_padding*/; 
+}
+
+.thumbnails .thumb_image {
+	outline: 0px solid rgba(0,0,0,.12);
+    outline-offset: -1px;
+}
+
+/* 
+Copied from adminedit line41 
+Added border-radius
+ */
+[thumbnails] .thumbnail img {
+    /* display: block;
+    min-height: 3px;
+    margin-bottom: 0; */
+    border-radius: 16px;
+}
+
+.thumbnails .title {
+    margin-top: 1.2em;
+    margin-bottom: .3em;
+    font-size: 1.2em;
+	font-weight: normal;
+	color: var(--color-black);
+	font-family: var(--font-serif-regularitalic), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, "Sans Serif", Icons;
+	font-feature-settings: "dlig" 1;
+    font-style: normal;
+	line-height: 1.1;
+}
+
+.thumbnails .tags {
+    margin-top: 1em;
+    margin-bottom: 3em;
+    font-size: 1.2em;
+	font-weight: 300;
+	color: rgba(25, 25, 25, 1);
+	font-family: Karla, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, "Sans Serif", Icons;
+	font-style: normal;
+	line-height: 1.2;
+}
+
+.thumbnails .tags a {
+	border-bottom: 0;
+    color: rgba(25, 25, 25, 1);
+    text-decoration: none;
+}
+
+.thumbnails .has_title .tags {
+	margin-top: 0;
+}
+
+/**
+ * Site Menu
+ */
+
+[data-css-preset] #site_menu_button {
+    color: rgba(0, 0, 0, 0.75);
+    line-height: 1;
+    font-size: 28px /*!site_menu_button*/;
+    padding: 6px;
+    line-height: 1;
+    background: rgba(33, 32, 46, 0);
+    position: fixed;
+    top: 2rem /*!site_menu_button*/;
+	right: 2rem /*!site_menu_button*/;
+}
+
+body.mobile #site_menu_button {
+	margin: -6px;
+    font-size: 34px;
+}
+
+#site_menu_button.custom_icon {
+	width: 40px;
+    height: auto;
+}
+
+#site_menu_button.active {
+	display: none;
+}
+
+/**
+ * Site Menu
+ */
+
+#site_menu {
+	font-family: Karla, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, "Sans Serif", Icons;
+	background: rgba(20, 20, 20, 0.95);
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	padding: 20px 30px 90px 30px;
+	max-width: 400px;
+	min-width: 300px;
+	text-align: left;
+	display: flex;
+	justify-content: flex-start;
+}
+
+body.mobile #site_menu {
+	width: 100%;
+}
+
+#site_menu .page-link a {
+	color: rgba(255, 255, 255, 0.75);
+}
+
+#site_menu .set-link > a {
+	color: rgba(255, 255, 255, 0.75);
+	font-weight: bold;
+}
+
+#site_menu a:active {
+	opacity: .7;
+}
+
+#site_menu a.active {
+	opacity: .4;
+}
+
+#site_menu .close {
+	display: none;
+	color: rgba(255, 255, 255, 0.4);
+	line-height: .85em;
+	font-size: 45px;
+}
+
+body.mobile #site_menu .close {
+	display: block;
+	font-size: 50px;
+	line-height: 1em;
+}
+
+#site_menu .break {
+	height: 28px;
+}
+
+#site_menu .indent {
+	margin-left: 28px;
+}
+
+/*
+ * Image Zoom
+ */
+
+.content img.image-zoom:active {
+  opacity: .7;
+}
+
+/**
+ * Quick View
+ */
+
+[data-css-preset] .quick-view {
+    padding-top: 2.5em /*!quick_view_padding*/;
+    padding-bottom: 2.5em /*!quick_view_padding*/;
+    padding-left: 2.5em /*!quick_view_padding*/;
+    padding-right: 2.5em /*!quick_view_padding*/;
+    height: 100% /*!quick_view_height*/;
+    width: 100% /*!quick_view_width*/;
+}
+
+body.mobile .quick-view {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+
+[data-css-preset] .quick-view-background {
+	background: rgba(0, 0, 0, 0.85) /*!quick_view_bgcolor*/;
+}
+
+.quick-view-caption {
+    font-family: Karla, -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    font-weight: 400;
+    transition: 100ms opacity ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 3.5rem 0;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.quick-view-caption span {
+    padding: 0.5em 1em;
+    display: inline-block;
+    background: rgba(0,0,0,.5);
+    color: white;
+}
+
+
+/**
+ * Quick View Navigation 
+ */
+
+.quick-view-navigation .left-arrow {
+    left: 10px;
+}
+
+.quick-view-navigation .right-arrow {
+    right: 10px;
+}
+
+.quick-view-navigation .left-arrow,
+.quick-view-navigation .right-arrow {
+    /* Change height/width together to scale */
+    height: 36px;
+    width: 36px;
+}
+
+.quick-view-navigation .left-arrow .inner-color,
+.quick-view-navigation .right-arrow .inner-color {
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+
+.quick-view-navigation .left-arrow .outer-color,
+.quick-view-navigation .right-arrow .outer-color {
+    stroke: rgba(25, 25, 25, 0.6);
+    stroke-width: 2.5px;
+}
+
+.quick-view-navigation .close-button {  
+    top: 10px;
+    right: 10px;
+    /* Change height/width together to scale */
+    width: 36px;
+    height: 36px;
+}
+
+.quick-view-navigation .close-button .inner-color {
+    stroke: #F5F5EE;
+    stroke-width: 1.5px;
+}
+
+.quick-view-navigation .close-button .outer-color {
+    stroke: #191919;
+    stroke-width: 2.5px;
+    opacity: 0.6;
+}
+
+/** 
+ * Image Gallery Navigation Arrows 
+ */
+ 
+.image-gallery-navigation .left-arrow,
+.image-gallery-navigation .right-arrow {
+    /* Change height/width together to scale */
+    height: 36px;
+    width: 36px;
+}
+
+.image-gallery-navigation .left-arrow .inner-color,
+.image-gallery-navigation .right-arrow .inner-color {
+    stroke: #F5F5EE;
+    stroke-width: 1.5px;
+}
+
+.image-gallery-navigation .left-arrow .outer-color,
+.image-gallery-navigation .right-arrow .outer-color {
+    stroke: rgba(25, 25, 25, 0.6);
+    stroke-width: 2.5px;
+}
+
+/**
+ * Wallpaper Backdrop Navigation Arrows 
+ */
+
+.wallpaper-navigation .left-arrow,
+.wallpaper-navigation .right-arrow {
+   /* Change height/width together to scale */
+   width: 36px;
+   height: 36px;
+}
+
+.wallpaper-navigation .left-arrow .inner-color,
+.wallpaper-navigation .right-arrow .inner-color {
+   stroke: #fff;
+   stroke-width: 1.5px;
+}
+
+.wallpaper-navigation .left-arrow .outer-color,
+.wallpaper-navigation .right-arrow .outer-color {
+    stroke: rgba(25, 25, 25, 0.6);
+    stroke-width: 2.5px;
+}
+
+
+/**
+ * Feed
+ */
+
+.feed .content_container .page {
+    border-top: 0px dashed rgba(245, 245, 238, 0.2);
+}
+
+.feed .content_container .page_container:first-child .page {
+	border-top: 0;
+}
+
+
+
+/*
+ * Audio Player
+ */
+
+.audio-player {
+    max-width: 36rem;
+    height: 3.3rem;
+    outline: 1px solid rgba(0,0,0,0.15);
+    color: rgba(25, 25, 25, 0.6);
+    background: #F5F5EE;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, "Sans Serif", Icons;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    margin: 1px 1px 1em 1px;
+}
+
+body.mobile .audio-player {
+    max-width: 100%;
+}
+
+.audio-player .separator {
+    width: 1px;
+    background-color: rgba(25, 25, 25,0.15);
+}
+
+.audio-player .button {
+    background: transparent;
+    cursor: pointer;
+    fill: rgba(0, 0, 0, 0.85);
+}
+
+.audio-player .icon {
+    fill: rgba(0, 0, 0, 0.85);
+    padding: 30%;
+    width: 100%;
+    margin: auto;
+}
+
+.audio-player .buffer {
+    background: rgba(0,0,0,0.03);
+}
+
+.audio-player .progress {
+    background: rgba(0,0,0,0.1);
+}
+
+.audio-player .progress-indicator {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    width: 1px;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    cursor: ew-resize;
+}
+
+.audio-player .note-icon {
+    height: 100%;
+    width: 3.8rem;
+    padding: 1rem;
+    fill: rgba(0, 0, 0, 0.5);
+}
+
+.audio-player .current-time {
+    padding-left: 1rem;
+}
+
+.audio-player .total-time {
+    padding-right: 1rem;
+}
+
+
+/* -------------------- */
+/* -- GLOBAL HELPERS -- */
+/* -------------------- */
+
+/* This seems not working */
+.align-right {
+    text-align: right;
+}
+
+/* -------------------- */
+/* -- CUSTOM GRID -- */
+/* -------------------- */
+/* GRID */
+.row {
+    --gridgap: 2em;
+}
+
+/* - All the children under row */
+.row > * {
+
+    /* - Setting bttom margin for each fraction */
+    margin-top: var(--gridgap);
+    margin-bottom: var(--gridgap);
+}
+
+@media (min-width: 768px) {
+
+    .row {
+        /* - Create grid in 12 columns, with equal fractions */
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--gridgap);
+    }
+
+    /* COMMONLY USED SEMANTIC COLUMN WIDTHS
+       - Setting size for each grid */
+    .one-half { grid-column: auto / span 6; }
+    .one-third { grid-column: auto / span 4; }
+    .two-thirds { grid-column: auto / span 8; }
+    .one-fourth { grid-column: auto / span 3; }
+    .three-fourths { grid-column: auto / span 9; }
+
+    /* - 12 Column Classes */
+    .col-1 {grid-column: auto / span 1; }
+    .col-2 {grid-column: auto / span 2; }
+    .col-3 {grid-column: auto / span 3; }
+    .col-4 {grid-column: auto / span 4; }
+    .col-5 {grid-column: auto / span 5; }
+    .col-6 {grid-column: auto / span 6; }
+    .col-7 {grid-column: auto / span 7; }
+    .col-8 {grid-column: auto / span 8; }
+    .col-9 {grid-column: auto / span 9; }
+    .col-10 {grid-column: auto / span 10; }
+    .col-11 {grid-column: auto / span 11; }
+    .col-12 {grid-column: auto / span 12; }
+
+    /*  - Centered columns */
+    .one-half.centered {grid-column: 4 / span 6; }
+    .one-third.centered {grid-column: 5 / span 4; } 
+    .two-thirds.centered {grid-column: 3 / span 8; } 
+
+    /* - Pushes */
+    .push-1 { grid-column-start: 2; }
+    .push-2 { grid-column-start: 3; }
+    .push-3 { grid-column-start: 4; }
+    .push-4 { grid-column-start: 5; }
+    .push-5 { grid-column-start: 6; }
+    .push-6 { grid-column-start: 7; }
+    .push-7 { grid-column-start: 8; }
+    .push-8 { grid-column-start: 9; }
+    .push-9 { grid-column-start: 10; }
+    .push-10 { grid-column-start: 11; }
+    .push-11 { grid-column-start: 12; }
+
+    /* SWAP (REVERSE) COLUMNS - WORKS ONLY w/ 2 CHILDREN  */
+    .row.swapped > *:first-child { order: 2; }
+    .row.swapped > *:last-child { order: 1; }
+
+}
+
+/* ------------------------- */
+/* --  CUSTOM SITE FOOTER -- */
+/* ------------------------- */
+
+[data-css-preset] body .footer-h2, .footer-h3 {
+    font-family: var(--font-serif-regular);
+    font-feature-settings: "dlig" 1;
+    font-weight: normal;
+    color: var(--color-white);
+    line-height: 1.1;
+    margin: 0 0 .5em 0;
+}
+
+[data-css-preset] body .footer-h2 {
+    font-size: clamp(2em, 4vw, 4vw);
+}
+
+[data-css-preset] body .footer-h3 {
+    font-family: var(--font-serif-regularitalic);
+    color: var(--color-white);
+    font-size: clamp(1.25em, 2vw, 2vw);
+    width: 32ch;
+    text-wrap: pretty;
+}
+
+@media (max-width: 400px){
+    
+    .footer-h3 {
+       width: 40vh;
+    }
+}
+
+/* CUSTOM SITE-FOOTER BODY COPY */
+/* This is for dark background.
+**/
+
+[data-predefined-style="true"] bodycopy .site-footer {
+	font-size: 1.5rem;
+	color: var(--color-white);
+	font-family: Karla, Icons;
+	/* font-style: light; */
+	line-height: 1.3;
+	font-weight: 400;
+    text-wrap: pretty;
+}
+
+[data-predefined-style="true"] bodycopy .site-footer a {
+	color: var(--color-white);
+}
+
+[data-predefined-style="true"] bodycopy .site-footer a:hover {
+	color: var(--color-yellow);
+    font-style: italic;
+}
+
+/* SITE NAV */ 
+.site-nav {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    /* margin: 0 auto;
+    width: 1200px; */
+}
+
+.site-nav ul {
+    /* width: 100%; */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-nav a {
+    padding: .5em 1em;
+    text-decoration: none; 
+    white-space: nowrap;  
+}
+
+@media (max-width: 512px){
+    .site-nav {
+       font-size: .75em;
+    }
+}
+
+/* --------------------------- */
+/* -- CUSTOM SITE STRUCTURE -- */
+/* --------------------------- */
+
+/* header {
+    z-index: 10;
+} */
+
+main {
+    padding: var(--unit-medium) 0 var(--unit-large) 0;
+    margin: var(--unit-medium) auto;
+}
+
+section {
+    margin: var(--unit-large) auto;
+}
+
+/* --------------------------- */
+/* --  CUSTOM UI COMPONENTS -- */
+/* --------------------------- */
+
+.a-button {
+    /* SET THE BUTTON COLORS */
+    background-color: var(--color-white);
+    border: 1px solid var(--color-black);
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 500;
+    
+    /* This is not working */
+    color: var(--color-white);
+
+    /* ENABLE BOX MODEL STYLING */
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: var(--unit-small) 0;
+
+    /* GET RID OF THE UNDERLINE */
+    text-decoration: none;
+}
+
+.a-button:hover {
+	color: var(--color-a-hover);
+    background-color: var(--color-yellow);
+	border-color: var(--color-yellow);
+
+}
+
+
+/* -------------------- */
+/* -- CUSTOM STYLING -- */
+/* -------------------- */
+
+/* CUSTOM STYLING FOR HOME */
+[data-css-preset] body .home-h1{
+    margin: 0;
+    font-size: 6vw;
+}
+
+@media (min-width: 400px) {
+    .home-h1{
+        font-size: 12vw;
+	}
+}
+
+[data-css-preset] body .home-h2{
+    font-family: 'ppeditorial-old-italic';
+    font-feature-settings: "dlig" 1;
+    font-weight: normal;
+}
+
+.frame {
+    margin: 5em 0;
+    border-radius: 32px;
+    padding: 3em 0;
+    color: var(--color-black);
+}
+
+.frame-alt {
+    margin: 5em 0;
+    border-radius: 32px;
+    padding: 3em;
+    
+    /* this is not working */
+    border: solid;
+    border-width: 2px;
+    border-color: var(--color-yellow);
+}
+
+.frame .row,
+.frame-alt .row {
+    margin: 0;
+    padding: 0;
+}
+
+.frame .row .one-half {
+    margin: 0;
+    padding: 0;
+}
+
+.hero-home .frame h1 .eyebrow {
+    font-family: Karla;
+    font-size: 1.5vw;
+    line-height: 1.2;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 1em 0 0.5em 0;
+}
+
+.hero-home .frame p {
+    font-size: 1.5vw;
+    line-height: 1.9vw;
+    margin-top: 0;
+    margin-bottom: 1.2vw;
+    padding: 0;
+    /* margin-top: 0.9vw; */
+}
+
+.hero-home .frame a {
+    color: var(--color-a);
+}
+
+.hero-home .frame a:hover {
+    color: var(--color-blue);
+}
+
+.hero-home .frame h3 {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-serif-regularitalic);
+    font-size: 2vw;
+    line-height: 1.2;
+    font-feature-settings: "dlig" 1;
+}
+
+.load-expand {
+    position: relative;
+    background-color: transparent;
+    border: none;
+}
+
+.load-expand::after {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    translate: 0 -50%;
+    background-color: var(--color-yellow);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-inline: auto;
+    interpolate-size: allow-keywords;
+    animation: load-expand .75s ease-out forwards; 
+}
+
+/* Animation on load: HOME */
+.load-expand > * {
+    opacity: 0;
+    position: relative;
+    z-index: 200;
+    animation: load-expand-content .75s ease-out forwards; 
+}
+
+@keyframes load-expand {
+
+    0% {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+    }
+
+    20% {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        border-radius: 32px;
+    }
+}
+
+@keyframes load-expand-content {
+
+    0% {
+        opacity: 0;
+    }
+
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* CUSTOM STYLING FOR ABOUT PAGE */
+[data-css-preset] body .about-h1{
+    margin: 0 0 .5em 0;
+}
+
+[data-css-preset] body .about-h2{
+    margin: 0 0 .5em 0;
+}
+
+[data-css-preset] body .about-h3, 
+.about-p {
+    max-width: 66ch;
+}
+
+[data-css-preset] body .about-h4 {
+    margin: 0 0 1em 0;
+}
+
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+dt {
+    font-family: var(--font-serif-regular);
+    font-feature-settings: "dlig" 1;
+    margin-top: .5rem;
+}
+
+dd {
+    font-family: var(--font-sansserif); 
+    font-weight: 400;
+    line-height: 1.1;
+    margin: .25rem .5rem;
+}
+
+
+
+/* CUSTOM STYLING FOR SUBPAGES */
+[data-css-preset] body .subpage .emphasis{
+    font-family: 'ppeditorial-old-italic';
+    font-feature-settings: "dlig" 1;
+    font-weight: normal;
+}
+
+[data-css-preset] body .subpage .subpage-h1 {
+    font-size: 4vw;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin: 0 0 1em 0;
+}
+
+[data-css-preset] body h2 span{
+    font-family: 'ppeditorial-old-italic';
+    font-feature-settings: "dlig" 1;
+    font-weight: normal;
+    color: inherit;
+    font-size: inherit;
+}
+
+[data-css-preset] body .h2-emphasis{
+    font-family: 'ppeditorial-old-italic';
+    font-feature-settings: "dlig" 1;
+    font-weight: normal;
+}
+
+[data-css-preset] body .subpage .subpage-h2 {
+    font-family: var(--font-serif-bold);
+    font-feature-settings: "dlig" 1;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0 0 1em 0;
+}
+
+[data-css-preset] body .subpage .subpage-h2-regular {
+    font-family: var(--font-serif-regular);
+    font-feature-settings: inherit;
+    font-weight: inherit;
+    text-transform: uppercase;
+    margin: inherit;
+}
+
+.hero-sub {
+
+}
