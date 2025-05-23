@@ -971,14 +971,21 @@ body.mobile .audio-player {
 }
 
 /* --------------------------- */
-/* --     SITE STRUCTURE    -- */
+/* -- CUSTOM SITE STRUCTURE -- */
 /* --------------------------- */
-/* SECTION */
-main {
-    padding: 0 0 var(--unit-large) 0;
-    margin: 0;
+
+header {
+    z-index: 10;
 }
 
+main {
+    padding: var(--unit-medium) 0 var(--unit-large) 0;
+    margin: var(--unit-medium) auto;
+}
+
+section {
+    margin: var(--unit-large) auto;
+}
 
 /* --------------------------- */
 /* --  CUSTOM UI COMPONENTS -- */
