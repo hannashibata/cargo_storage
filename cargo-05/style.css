@@ -896,6 +896,8 @@ body.mobile .audio-player {
     font-feature-settings: "dlig" 1;
     font-weight: normal;
     color: var(--color-white);
+    line-height: 1.1;
+    margin: 0 0 .5em 0;
 }
 
 [data-css-preset] body .footer-h2 {
@@ -906,13 +908,14 @@ body.mobile .audio-player {
     font-family: var(--font-serif-regularitalic);
     color: var(--color-white);
     font-size: clamp(1.25em, 2vw, 2vw);
-    width: 36ch;
+    width: 32ch;
     text-wrap: pretty;
 }
 
-@media (max-width: 512px){
-    footer h3 {
-       width: 50vh;
+@media (max-width: 400px){
+    
+    .footer-h3 {
+       width: 40vh;
     }
 }
 
