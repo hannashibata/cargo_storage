@@ -974,8 +974,8 @@ body.mobile .audio-player {
 /* --     SITE STRUCTURE    -- */
 /* --------------------------- */
 /* SECTION */
-section {
-    padding: var(--unit-large) 0;
+main {
+    padding: 0 0 var(--unit-large) 0;
     margin: 0;
 }
 
@@ -1204,7 +1204,21 @@ dd {
 }
 
 
+
 /* CUSTOM STYLING FOR SUBPAGES */
+[data-css-preset] body .subpage .emphasis{
+    font-family: 'ppeditorial-old-italic';
+    font-feature-settings: "dlig" 1;
+    font-weight: normal;
+}
+
+[data-css-preset] body .subpage .subpage-h1 {
+    font-size: 4vw;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin: 0 0 1em 0;
+}
+
 [data-css-preset] body h2 span{
     font-family: 'ppeditorial-old-italic';
     font-feature-settings: "dlig" 1;
@@ -1218,5 +1232,14 @@ dd {
     font-feature-settings: "dlig" 1;
     font-weight: normal;
 }
+
+[data-css-preset] body .subpage .subpage-h2 {
+    font-family: var(--font-serif-bold);
+    font-feature-settings: "dlig" 1;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0 0 1em 0;
+}
+
 
 
