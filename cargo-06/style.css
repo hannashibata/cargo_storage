@@ -349,6 +349,7 @@ bodycopy a.icon-link:hover {
 
 /* HS: adding p styling */
 p {
+    text-wrap: pretty;
     margin: .75em 0 1em 0;
 }
 
@@ -1181,13 +1182,13 @@ section {
     }
 }
 
-/* CUSTOM STYLING FOR ABOUT PAGE */
+/* HS: CUSTOM STYLING FOR ABOUT PAGE */
 [data-css-preset] body .about-h1{
     margin: 0 0 .5em 0;
 }
 
 [data-css-preset] body .about-h2{
-    margin: 0 0 .5em 0;
+    margin: 0 0 1em 0;
 }
 
 [data-css-preset] body .about-h3, 
