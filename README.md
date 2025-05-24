@@ -11,4 +11,4 @@ cargo-04:  Added H3 and H4; custom typography settings for about page and footer
 
 cargo-05:  Deleted shop feature (Styling under "Shop Button"); Added border-radius: 8px (content img); added section styling, and wrapped footer and intro content with <main></main>; added custom styling for subpages; Added intro.html and cleaned up the code; created subpage files (html) and cleaned up; added styling for header and section; NOTE: clamp might not be working. Need to find img-gallery styling.
 
-cargo-06:  Updated copy in html;
+cargo-06:  Updated copy in html; added styling to <p>;
