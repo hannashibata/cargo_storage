@@ -1225,7 +1225,7 @@ dd {
     margin: .25rem .5rem;
 }
 
-/* CUSTOM STYLING FOR SUBPAGES */
+/* HS: CUSTOM STYLING FOR SUBPAGES */
 [data-css-preset] body .subpage .emphasis{
     font-family: 'ppeditorial-old-italic';
     font-feature-settings: "dlig" 1;
@@ -1270,8 +1270,9 @@ dd {
     margin: 0 0 1em 0;
 }
 
-.hero-sub {
-
+ul {
+    list-style: none;
+    opacity: 50%;
 }
 
 /* FOR DEV TESTING PURPOSES ONLY: light */
