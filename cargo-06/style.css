@@ -191,13 +191,6 @@ img {
 	padding: 0;
 }
 
-.img-wrapper {
-    border-radius: 8px;
-    max-width: 100%;
-    margin: 0;
-    overflow: clip;
-}
-
 ul,
 ol {
 	margin: 0;
@@ -833,7 +826,7 @@ body.mobile .audio-player {
 /* -------------------- */
 /* GRID */
 .row {
-    --gridgap: 3em;
+    --gridgap: 2em;
 }
 
 /* - All the children under row */
@@ -1225,12 +1218,11 @@ dd {
     margin: .25rem .5rem;
 }
 
-/* HS: CUSTOM STYLING FOR SUBPAGES */
+/* CUSTOM STYLING FOR SUBPAGES */
 [data-css-preset] body .subpage .emphasis{
     font-family: 'ppeditorial-old-italic';
     font-feature-settings: "dlig" 1;
     font-weight: normal;
-    margin: 0 0 1em 0;
 }
 
 [data-css-preset] body .subpage .subpage-h1 {
@@ -1270,9 +1262,8 @@ dd {
     margin: 0 0 1em 0;
 }
 
-ul {
-    list-style: none;
-    opacity: 50%;
+.hero-sub {
+
 }
 
 /* FOR DEV TESTING PURPOSES ONLY: light */
