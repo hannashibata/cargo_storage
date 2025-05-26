@@ -14,3 +14,5 @@ cargo-05:  Deleted shop feature (Styling under "Shop Button"); Added border-radi
 cargo-06:  Updated copy in html; added styling to <p>;
 
 cargo-07: Updated la mente subpage; increased --gridgap to 3em from 2em; added ul styling in the custom styling for subpages;
+
+cargo-08: Added home.html; updated custom css for home;
