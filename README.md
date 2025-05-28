@@ -15,4 +15,4 @@ cargo-06:  Updated copy in html; added styling to <p>;
 
 cargo-07: Updated la mente subpage; increased --gridgap to 3em from 2em; added ul styling in the custom styling for subpages;
 
-cargo-08: Added home.html; updated custom css for home; deleted main tag from home.html annd increased padding in the frame;
+cargo-08: Added home.html; updated custom css for home; deleted main tag from home.html and typeset the hero section in the home;

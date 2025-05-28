@@ -1038,7 +1038,7 @@ section {
 /* -- CUSTOM STYLING -- */
 /* -------------------- */
 
-/* CUSTOM STYLING FOR HOME */
+/* HOME */
 [data-css-preset] body .home-h1 {
     margin: 0;
     font-size: 6vw;
@@ -1066,22 +1066,10 @@ section {
     color: var(--color-black);
 }
 
-
-/* second half is not working */
-/* .frame-alt {
-    margin: 5em 0;
-    border-radius: 32px;
-    padding: 3em;
-    
-    border: solid;
-    border-width: 2px;
-    border-color: var(--color-yellow);
-} */
-
 .frame .row,
 .frame-alt .row {
     margin: 0;
-    padding: 0;
+    padding: 3em;
 }
 
 .frame .row .one-half {
@@ -1089,22 +1077,12 @@ section {
     padding: 0;
 }
 
-.hero-home .frame h1 .eyebrow {
-    font-family: Karla;
-    font-size: 1.5vw;
-    line-height: 1.2;
-    font-weight: 300;
-    text-transform: uppercase;
-    margin: 1em 0 0.5em 0;
-}
-
-.hero-home .frame p {
-    font-size: 1.5vw;
-    line-height: 1.9vw;
+.frame p {
+    font-size: 1em;
+    line-height: 1.3;
     margin-top: 0;
     margin-bottom: 1.2vw;
     padding: 0;
-    /* margin-top: 0.9vw; */
 }
 
 .hero-home .frame a {
@@ -1113,15 +1091,6 @@ section {
 
 .hero-home .frame a:hover {
     color: var(--color-blue);
-}
-
-.hero-home .frame h3 {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-serif-regularitalic);
-    font-size: 2vw;
-    line-height: 1.2;
-    font-feature-settings: "dlig" 1;
 }
 
 .load-expand {
@@ -1277,6 +1246,7 @@ dd {
 ul {
     list-style: none;
     opacity: 50%;
+    padding: 0;
 }
 
 /* FOR DEV TESTING PURPOSES ONLY: light */
